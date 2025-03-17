@@ -1,83 +1,82 @@
 .contact {
-    width: 100%;
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    gap: 10px;
-  }
-  
-  .input {
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 400px;
-  }
-  
+  width: 100%;
+  display: flex;
+  align-items: center; /* Ensures proper alignment */
+  gap: 10px;
+  flex-wrap: wrap; /* Allows items to adjust dynamically */
+}
+
+/* Input Field */
+.input {
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Email Input */
+#email {
+  border: 1px solid #ABABAB;
+  color: #444; /* Changed to improve readability */
+  width: 55%;
+  max-width: 350px;
+}
+
+/* Button */
+#btn {
+  background-color: #EA7B2C;
+  color: white;
+  width: 30%;
+  min-width: 120px;
+  border: 1px solid #EA7B2C;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#btn:hover {
+  background-color: #d06a22;
+}
+
+/* Message */
+.message {
+  width: 100%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+
+/* Medium screens (Tablets, 1024px and below) */
+@media (max-width: 1024px) {
   #email {
-    border: 1px solid #ABABAB;
-    color: #ABABAB;
-    width: 55%;
-    max-width: 350px;
+    width: 70%;
   }
   
   #btn {
-    background-color: #EA7B2C;
-    color: white;
-    width: 30%;
-    min-width: 120px;
-    margin-left: 0;
-    border: 1px solid #EA7B2C;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    width: 40%;
   }
-  
-  #btn:hover {
-    background-color: #d06a22;
-  }
-  
-  .message {
-    width: 100%;
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-    font-size: larger;
+}
+
+/* Small screens (Mobile, 768px and below) */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    position: static; /* Removed absolute positioning to prevent overlap */
+    gap: 12px;
     margin-top: 10px;
   }
-  
-  /* Medium screens (Tablets, 768px and up) */
-  @media (max-width: 1024px) {
-    #email {
-      width: 70%;
-    }
-    
-    #btn {
-      width: 40%;
-    }
-  }
-  
-  /* Small screens (Mobile, 480px and up) */
-  @media (max-width: 768px) {
-    .contact {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        position: absolute;
-        bottom: 0px;
-        left: 1%;
-        /* right: 50%; */
 
-      }
-  
-    #email,
-    #btn {
-      width: 80%;
-      max-width: none;
-    }
-  
-    .message {
-      font-size: medium;
-    }
+  #email,
+  #btn {
+    width: 90%; /* Better width handling */
+    max-width: 300px;
   }
-  
+
+  .message {
+    font-size: medium;
+  }
+}

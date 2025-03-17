@@ -1,21 +1,24 @@
 .card-container {
-  width: 80%;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Improved */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Medium screens */
+/* Medium screens (Tablets) */
 @media (max-width: 1024px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Slightly bigger cards */
+    justify-content: center; /* Ensure items stay centered */
   }
 }
 
-/* Small screens */
+/* Small screens (Mobile) */
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    place-items: center; /* Centers the cards inside the grid */
+    text-align: center;
   }
 }
